@@ -5,10 +5,14 @@
  */
 package sort.methods;
 
+import sort.strategy.Istrategy;
+
 /**
  *
  * @author LeopardProMK
  */
-public class Quicksort {
+public class Quicksort implements Istrategy {
     /* http://www.algorytm.org/algorytmy-sortowania/sortowanie-szybkie-quicksort/quick-j.html */
+    
+    
 }

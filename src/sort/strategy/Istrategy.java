@@ -9,6 +9,11 @@ package sort.strategy;
  *
  * @author student
  */
-public interface Istrategy {
+public interface Istrategy  {
+    
+    
+    public int[] bsort(int tablica[]);
+    
+    
     
 }
