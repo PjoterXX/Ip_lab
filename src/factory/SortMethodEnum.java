@@ -3,12 +3,18 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package sort.methods;
+package factory;
 
 /**
  *
- * @author LeopardProMK
+ * @author student
  */
-public class Quicksort {
-    /* http://www.algorytm.org/algorytmy-sortowania/sortowanie-szybkie-quicksort/quick-j.html */
-}
+
+ public enum SortMethodEnum
+    {
+    bubblesort,
+    instertionsort,
+    quicksort,
+    selectionsort
+    }
+

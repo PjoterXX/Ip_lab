@@ -5,35 +5,31 @@
  */
 package sort.methods;
 
-import sort.strategy.Istrategy;
-
 /**
  *
  * @author LeopardProMK
  */
-public class Bubblesort implements  Istrategy {
-    /* http://www.algorytm.org/algorytmy-sortowania/sortowanie-babelkowe-bubblesort.html */
-   
-     @Override
-   public int[] bsort(int tablica[]){
-       
-        int temp;
-        int zmiana = 1;
-        while(zmiana > 0){
-                zmiana = 0;
-                for(int i=0; i<tablica.length-1; i++){
-                    if(tablica[i]>tablica[i+1]){
-                    temp = tablica[i+1];
-                    tablica[i+1] = tablica[i];
-                    tablica[i] = temp;
-                    zmiana++;
-                 }
-               }
-        }
-         return tablica;
-   
+import strategymyfriend.AbstarctStrategy;
         
-     }
-}
+public class Bubblesort  implements AbstarctStrategy {
+    /* http://www.algorytm.org/algorytmy-sortowania/sortowanie-babelkowe-bubblesort.html */
     
-
+    public int[] sort(int tab[]){
+    int temp;
+    int zmiana = 1;
+    
+    while(zmiana > 0){
+        zmiana = 0;
+        for(int i=0; i<tab.length-1; i++){
+                if(tab[i]>tab[i+1]){
+                    temp = tab[i+1];
+                    tab[i+1] = tab[i];
+                    tab[i] = temp;
+                    zmiana++;
+            }
+        }
+       
+    }
+        return tab;
+}
+}

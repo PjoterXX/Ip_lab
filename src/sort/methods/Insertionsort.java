@@ -5,44 +5,30 @@
  */
 package sort.methods;
 
-import sort.strategy.Istrategy;
-
 /**
  *
  * @author LeopardProMK
  */
+import strategymyfriend.AbstarctStrategy;
 
+public class Insertionsort implements AbstarctStrategy{
+   
+@Override
+public double[] sort(double tab[]){
+      
+    double klucz;
+    int j;
+      for (int i=1;i<tab.length;i++){
+	j=i;
+	klucz=tab[i];
+	while (j>0 && tab[j-1]>klucz){
+            tab[j]=tab[j-1];
+		j--;
+	}
+	tab[j]=klucz;
+    }
+    return tab;
+    }
 
-public class Insertionsort implements Istrategy {
     
-    
-    
-       
-        int ile_liczb;
-        @Override
-       public int[] bsort(int tablica[]) {
-          int i,j,v;
-         for (i=1;i<ile_liczb;i++) 
-         {
-           j=i;
-           v=tablica[i];
-          while ((j>0) && (tablica[j-1]>v)) 
-          {
-          tablica[j]=tablica[j-1];
-          j--;
-          }
-         
-       tablica[j]=v;
-         }
-         
-         return tablica;
-       }
-       
-       
 }
- 
-
-    
-
-    
-
